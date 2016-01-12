@@ -1,14 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Search = require('./components/Search.jsx');
+var Container = require('./components/Container.jsx');
 require('./index.css');
 
-var Index = React.createClass({
-	render: function() {
-		return (
-			<Search name='World' />
-		);
-	}
-});
-
-ReactDOM.render(<Index />, document.getElementById('app'));
+ReactDOM.render(<Container />, document.getElementById('app'));
