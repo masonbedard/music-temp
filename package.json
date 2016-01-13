@@ -11,7 +11,9 @@
   "author": "Mason Bedard",
   "license": "MIT",
   "babel": {
-    "presets": ["react"]
+    "presets": [
+      "react"
+    ]
   },
   "devDependencies": {
     "babel-core": "^6.3.17",
@@ -27,6 +29,7 @@
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "superagent": "^1.6.1"
   }
 }
