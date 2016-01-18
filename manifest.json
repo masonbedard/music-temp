@@ -1,0 +1,9 @@
+{
+    "manifest_version": 2,
+    "name": "music-temp",
+    "description": "This extension is Shazam for listening to albums on Youtube",
+    "version": "1.0",
+    "browser_action": {
+        "default_popup": "dist/index.html"
+    }
+}

@@ -8,7 +8,8 @@ module.exports = React.createClass({
 	},
 	handleSubmit: function(e) {
 		e.preventDefault();
-		this.setState({query: 'album: album artist: artist'});
+		this.props.query(this.state.query);
+		//this.setState({query: 'album: album artist: artist'});
 	},
 	handleChange: function(e) {
 		this.setState({query: e.target.value});

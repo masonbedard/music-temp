@@ -1,11 +1,11 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var request = require('superagent');
-var Container = require('./components/Container.jsx');
+var Extension = require('./components/Extension.jsx');
 require('./index.css');
 
-request.get('/search').query({query: 'lolfunny'}).end(function(err, res) {
-	console.log(res);
-});
+// var bkg = chrome.extension.getBackgroundPage();
+// bkg.console.log('testing');
 
-ReactDOM.render(<Container />, document.getElementById('app'));
+
+ReactDOM.render(<Extension />, document.getElementById('app'));
