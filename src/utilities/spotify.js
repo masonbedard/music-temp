@@ -53,16 +53,19 @@ var getAlbums = function(ids, callback) {
 			var name = albumJson.name;
 			var artist = albumJson.artists[0].name;
 			var tracks = [];
+			var trackStarts = [];
 
+			var start = 0;
 			var itemsJson = albumJson.tracks.items;
 			for (var j = 0; j < itemsJson.length; j++) {
 				var itemJson = itemsJson[j];
 				tracks.push(new Track(itemJson.track_number, itemJson.name, itemJson.duration_ms));
+				trackStarts.push(start);
+				start += Math.ceil(itemJson.duration_ms / 1000);
 			}
+			trackStarts.push(start);
 
-			console.log(tracks);
-
-			albums.push(new Album(id, imageURL, name, artist, tracks));
+			albums.push(new Album(id, imageURL, name, artist, tracks, trackStarts));
 
 		}
 

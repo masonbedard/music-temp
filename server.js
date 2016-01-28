@@ -6,6 +6,8 @@ app.use(express.static(__dirname + '/dist'));
 
 app.get('/search', function(req, res) {
 
+	console.log('here');
+
 	var query = req.query.query;
 	if (!query) {
 		res.json({'err': true});
